@@ -41,7 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblZiraat = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -202,23 +202,23 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lblZiraat);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(292, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(286, 153);
             this.panel3.TabIndex = 6;
             // 
-            // label3
+            // lblZiraat
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.label3.Location = new System.Drawing.Point(60, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 73);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "0.00₺";
+            this.lblZiraat.AutoSize = true;
+            this.lblZiraat.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblZiraat.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.lblZiraat.Location = new System.Drawing.Point(60, 49);
+            this.lblZiraat.Name = "lblZiraat";
+            this.lblZiraat.Size = new System.Drawing.Size(168, 73);
+            this.lblZiraat.TabIndex = 7;
+            this.lblZiraat.Text = "0.00₺";
             // 
             // panel4
             // 
@@ -310,6 +310,7 @@
             this.Name = "FrmBanks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBanks";
+            this.Load += new System.EventHandler(this.FrmBanks_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -338,7 +339,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblZiraat;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
