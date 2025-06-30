@@ -114,5 +114,10 @@ namespace FinancialCrm
             frm.Show();
             this.Hide();
         }
+
+        private void FrmCategories_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
