@@ -94,6 +94,7 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "Çıkış Yap";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -118,6 +119,7 @@
             this.button7.TabIndex = 5;
             this.button7.Text = "Dashbord";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

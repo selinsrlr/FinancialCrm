@@ -30,7 +30,31 @@ namespace FinancialCrm
             lblLastProcessAmount.Text = lastProcessAmount.ToString() + " ₺";
 
             //Chart1 Kodları
+            var bankData = db.Banks.Select(x => new
+            {
+                x.BankTitle,
+                x.BankBalance
+            }).ToList();
+            chart1.Series.Clear();
+            var series = chart1.Series.Add("Series1");
+            foreach (var item in bankData)
+            {
+                series.Points.AddXY(item.BankTitle, item.BankBalance);
+            }
 
+            //Chart2 Kodları
+            var billData = db.Bills.Select(x => new
+            {
+                x.BillTitle,
+                x.BillAmount
+            }).ToList();
+            chart2.Series.Clear();
+            var series2 = chart2.Series.Add("Faturalar");
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            foreach (var item in billData)
+            {
+                series2.Points.AddXY(item.BillTitle, item.BillAmount);
+            }
 
 
         }
@@ -62,6 +86,25 @@ namespace FinancialCrm
                 lblBillsTitle.Text = "İnternet Faturası";
                 lblBillsAmount.Text = bill4.ToString() + " ₺";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmBanks frm = new FrmBanks();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnBillsForm_Click(object sender, EventArgs e)
+        {
+            FrmBills frm = new FrmBills();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
